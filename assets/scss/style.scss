@@ -3042,27 +3042,25 @@ div {
     }
 
     &-levels {
-      display: grid;
-      grid-template-columns: repeat(5, 220px);
-      width: max-content;
-      margin-top: 72px;
+      width: 100%;
+      margin-top: 40px;
       padding: 0 18px 64px;
     }
 
     &-level {
-      height: 230px;
+      width: 322px;
+      flex-shrink: 0;
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-end;
 
       > img,
       &__visual {
-        width: 145px;
-        height: 130px;
+        width: 245px;
+        height: 231px;
         object-fit: contain;
-        margin-bottom: -7px;
+        flex-shrink: 0;
       }
 
       &__visual {
@@ -3093,6 +3091,7 @@ div {
       > button {
         min-width: 142px;
         height: 36px;
+        min-height: 36px;
         padding: 0 16px;
         border-radius: 30px;
         background: #d0d0d0;
@@ -3110,23 +3109,14 @@ div {
       }
 
       > i {
-        width: 100%;
-        height: 2px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
         margin-top: 27px;
         background: #d9e1e5;
-        position: relative;
-
-        &::after {
-          content: "";
-          width: 14px;
-          height: 14px;
-          border-radius: 50%;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          background: #bdcbd3;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       > p {
@@ -3139,15 +3129,6 @@ div {
         > i,
         > i::after {
           background: #31d84f;
-        }
-
-        > i::after {
-          content: "✓";
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: $color-white;
-          font-size: 10px;
         }
       }
     }
@@ -3203,7 +3184,6 @@ div {
           position: absolute;
           right: -9px;
           bottom: -24px;
-          opacity: 0.72;
         }
       }
     }
@@ -3284,6 +3264,7 @@ div {
       display: grid;
       grid-template-columns: 72px 1fr;
       grid-template-rows: 1fr 28px;
+      gap: 16px;
       align-items: center;
       text-align: left;
       cursor: pointer;
@@ -3396,7 +3377,7 @@ div {
 
   .achievement-code {
     min-height: 88px;
-    border: 1px dashed $color-blue;
+
     background: #f2fbff;
     display: flex;
     flex-wrap: wrap;
@@ -3404,26 +3385,8 @@ div {
     justify-content: center;
     gap: 8px;
     position: relative;
-
-    &::before,
-    &::after {
-      content: "";
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: $color-white;
-      border: 1px dashed $color-blue;
-    }
-
-    &::before {
-      left: -17px;
-    }
-    &::after {
-      right: -17px;
-    }
+    background: url(../images/chegirma-bg.png) no-repeat;
+    background-size: 100% 100%;
 
     strong,
     span {
@@ -3440,11 +3403,7 @@ div {
     }
   }
 
-  @include media(1440) {
-    .achievement-levels {
-      grid-template-columns: repeat(5, 190px);
-    }
-  }
+  // Removed media(1440) grid styles for achievements
 
   @include media(1150) {
     .dashboard-right {
@@ -3462,14 +3421,23 @@ div {
       }
 
       &-levels {
-        grid-template-columns: repeat(5, 220px);
-        margin: 42px 0 0;
-        padding: 0 0 64px;
-        overflow: visible;
+        margin: 24px 0 0;
+        padding: 0 0 40px;
       }
 
       &-level {
-        height: 210px;
+        width: 260px;
+
+        > img,
+        &__visual {
+          width: 200px;
+          height: 180px;
+        }
+
+        > b {
+          top: 40px;
+          right: 10px;
+        }
       }
 
       > h2 {
@@ -3601,4 +3569,8 @@ div {
   .casey-comments__textarea {
     font-size: 14px;
   }
+}
+
+.achievements-page .achievement-popup__dialog::-webkit-scrollbar {
+  display: none;
 }

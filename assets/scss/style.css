@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap");
 * {
   padding: 0;
@@ -2828,27 +2827,24 @@ div {
   line-height: 132%;
 }
 .achievements-page .achievement-levels {
-  display: grid;
-  grid-template-columns: repeat(5, 220px);
-  width: -moz-max-content;
-  width: max-content;
-  margin-top: 72px;
+  width: 100%;
+  margin-top: 40px;
   padding: 0 18px 64px;
 }
 .achievements-page .achievement-level {
-  height: 230px;
+  width: 322px;
+  flex-shrink: 0;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
 }
 .achievements-page .achievement-level > img, .achievements-page .achievement-level__visual {
-  width: 145px;
-  height: 130px;
+  width: 245px;
+  height: 231px;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-bottom: -7px;
+  flex-shrink: 0;
 }
 .achievements-page .achievement-level__visual {
   display: flex;
@@ -2875,6 +2871,7 @@ div {
 .achievements-page .achievement-level > button {
   min-width: 142px;
   height: 36px;
+  min-height: 36px;
   padding: 0 16px;
   border-radius: 30px;
   background: #d0d0d0;
@@ -2890,22 +2887,14 @@ div {
   margin-left: 5px;
 }
 .achievements-page .achievement-level > i {
-  width: 100%;
-  height: 2px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   margin-top: 27px;
   background: #d9e1e5;
-  position: relative;
-}
-.achievements-page .achievement-level > i::after {
-  content: "";
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: #bdcbd3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .achievements-page .achievement-level > p {
   margin-top: 25px;
@@ -2915,14 +2904,6 @@ div {
 .achievements-page .achievement-level.is-complete > i,
 .achievements-page .achievement-level.is-complete > i::after {
   background: #31d84f;
-}
-.achievements-page .achievement-level.is-complete > i::after {
-  content: "✓";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 10px;
 }
 .achievements-page .achievement > h2 {
   margin: 40px 0 24px;
@@ -2973,7 +2954,6 @@ div {
   position: absolute;
   right: -9px;
   bottom: -24px;
-  opacity: 0.72;
 }
 .achievements-page .achievement-popup {
   display: none;
@@ -3042,6 +3022,7 @@ div {
   display: grid;
   grid-template-columns: 72px 1fr;
   grid-template-rows: 1fr 28px;
+  gap: 16px;
   align-items: center;
   text-align: left;
   cursor: pointer;
@@ -3140,7 +3121,6 @@ div {
 }
 .achievements-page .achievement-code {
   min-height: 88px;
-  border: 1px dashed #30abe0;
   background: #f2fbff;
   display: flex;
   flex-wrap: wrap;
@@ -3148,23 +3128,8 @@ div {
   justify-content: center;
   gap: 8px;
   position: relative;
-}
-.achievements-page .achievement-code::before, .achievements-page .achievement-code::after {
-  content: "";
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #fff;
-  border: 1px dashed #30abe0;
-}
-.achievements-page .achievement-code::before {
-  left: -17px;
-}
-.achievements-page .achievement-code::after {
-  right: -17px;
+  background: url(../images/chegirma-bg.png) no-repeat;
+  background-size: 100% 100%;
 }
 .achievements-page .achievement-code strong,
 .achievements-page .achievement-code span {
@@ -3177,11 +3142,6 @@ div {
   margin-top: -18px;
   font-size: 8px;
   color: rgba(60, 60, 60, 0.6);
-}
-@media screen and (max-width: 1440px) {
-  .achievements-page .achievement-levels {
-    grid-template-columns: repeat(5, 190px);
-  }
 }
 @media screen and (max-width: 1150px) {
   .achievements-page .dashboard-right {
@@ -3197,13 +3157,19 @@ div {
     font-size: 14px;
   }
   .achievements-page .achievement-levels {
-    grid-template-columns: repeat(5, 220px);
-    margin: 42px 0 0;
-    padding: 0 0 64px;
-    overflow: visible;
+    margin: 24px 0 0;
+    padding: 0 0 40px;
   }
   .achievements-page .achievement-level {
-    height: 210px;
+    width: 260px;
+  }
+  .achievements-page .achievement-level > img, .achievements-page .achievement-level__visual {
+    width: 200px;
+    height: 180px;
+  }
+  .achievements-page .achievement-level > b {
+    top: 40px;
+    right: 10px;
   }
   .achievements-page .achievement > h2 {
     margin: 32px 0 20px;
@@ -3319,4 +3285,7 @@ div {
   .casey-comments__textarea {
     font-size: 14px;
   }
+}
+.achievements-page .achievement-popup__dialog::-webkit-scrollbar {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

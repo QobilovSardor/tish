@@ -137,6 +137,16 @@ if (document.querySelector(".casey-swiper")) {
   });
 }
 
+// Achievements slider
+if (document.querySelector(".achievement-levels.swiper")) {
+  new Swiper(".achievement-levels.swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    grabCursor: true,
+    allowTouchMove: true,
+  });
+}
+
 // Casey comments
 const commentInput = document.getElementById("casey-comment-input");
 const commentSubmit = document.getElementById("casey-comment-submit");
