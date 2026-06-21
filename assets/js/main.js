@@ -127,6 +127,13 @@ if (document.querySelector(".casey-swiper")) {
       prevEl: ".casey-slider-prev",
       nextEl: ".casey-slider-next",
     },
+    breakpoints: {
+      1400: { slidesPerView: 3.2 },
+      1200: { slidesPerView: 2.6 },
+      992: { slidesPerView: 2.3 },
+      600: { slidesPerView: 2.1 },
+      0: { slidesPerView: 1.1 },
+    },
   });
 }
 

@@ -3255,4 +3255,70 @@ div {
   .achievements-page .achievement-voucher > p {
     text-align: center;
   }
+}
+
+@media (max-width: 600px) {
+  .casey-header {
+    flex-direction: column-reverse;
+    align-items: start;
+    margin-top: 24px;
+    gap: 24px;
+  }
+  .casey-header .casey-modal__open {
+    width: 100%;
+  }
+  .casey-modal__textarea {
+    height: 160px !important;
+  }
+  .casey-modal__upload {
+    height: 94px;
+  }
+  .modal-close {
+    width: 14px;
+    height: 14px;
+  }
+  .modal-close svg,
+  .modal-close img {
+    width: 100%;
+    height: 100%;
+  }
+  .casey-comments {
+    padding: 16px;
+  }
+  .casey-content-page .casey-swiper .swiper-slide img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 282px;
+    aspect-ratio: unset;
+  }
+  .casey-content__text p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .casey-content__text {
+    gap: 24px;
+  }
+  .casey-content__body {
+    margin-bottom: 24px;
+    gap: 24px;
+  }
+  .casey-content__value {
+    font-size: 18px;
+  }
+  .casey-content h2 {
+    font-size: 28px;
+  }
+  .casey-content__tags {
+    margin: 24px 0;
+  }
+  .casey-content__breadcrumb a,
+  .casey-content__breadcrumb span {
+    font-size: 12px;
+  }
+  .casey-comments__text,
+  .casey-comments__name,
+  .casey-comments__textarea {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */
