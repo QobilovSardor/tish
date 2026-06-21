@@ -3063,7 +3063,6 @@ div {
         height: 130px;
         object-fit: contain;
         margin-bottom: -7px;
-        filter: saturate(0.7);
       }
 
       &__visual {
@@ -3179,8 +3178,7 @@ div {
         justify-content: space-between;
 
         p {
-          max-width: 235px;
-          font-size: 14px;
+          font-size: 18px;
           line-height: 140%;
           position: relative;
           z-index: 1;
@@ -3191,7 +3189,7 @@ div {
           border-radius: 40px;
           background: $color-white;
           color: $color-dark-blue;
-          font-size: 20px;
+          font-size: 32px;
           line-height: 1;
           font-weight: 400;
           position: relative;

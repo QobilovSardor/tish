@@ -2849,7 +2849,6 @@ div {
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: -7px;
-  filter: saturate(0.7);
 }
 .achievements-page .achievement-level__visual {
   display: flex;
@@ -2950,8 +2949,7 @@ div {
   justify-content: space-between;
 }
 .achievements-page .achievement-points article p {
-  max-width: 235px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 140%;
   position: relative;
   z-index: 1;
@@ -2961,7 +2959,7 @@ div {
   border-radius: 40px;
   background: #fff;
   color: #0e4e81;
-  font-size: 20px;
+  font-size: 32px;
   line-height: 1;
   font-weight: 400;
   position: relative;
