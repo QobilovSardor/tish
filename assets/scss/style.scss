@@ -3117,10 +3117,29 @@ div {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        z-index: 1;
+        flex-shrink: 0;
+
+        > img {
+          display: none;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 322px;
+          height: 2px;
+          background: #d9e1e5;
+          z-index: -1;
+        }
       }
 
       > p {
-        margin-top: 25px;
+        margin-top: 12px;
         font-size: 14px;
       }
 
@@ -3129,6 +3148,10 @@ div {
         > i,
         > i::after {
           background: #31d84f;
+        }
+
+        > i > img {
+          display: block;
         }
       }
     }

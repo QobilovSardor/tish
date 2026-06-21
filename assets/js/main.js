@@ -144,6 +144,9 @@ if (document.querySelector(".achievement-levels.swiper")) {
     spaceBetween: 0,
     grabCursor: true,
     allowTouchMove: true,
+    simulateTouch: true,
+    touchRatio: 1,
+    threshold: 5,
   });
 }
 
